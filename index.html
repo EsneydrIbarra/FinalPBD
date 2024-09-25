@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PDB MongoDB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Restaurant Website" name="keywords">
+    <meta content="Restaurant Website" name="description">
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f7f7;        
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #444444;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #dddddd;
+        }
+
+        .navbar-brand {
+            font-size: 28px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #f4f4f4;
+        }
+
+        /* Carousel */
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background-image: url('img/banner.jpeg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .carousel-text {
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 10;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .carousel-text h1 {
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        .carousel-text span {
+            color: #f9d342;
+        }
+
+        .carousel-text img {
+            border: 5px solid white;
+            border-radius: 50%;
+            margin: 20px 0;
+        }
+
+        .carousel-text a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #f9d342;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-text a:hover {
+            background-color: #ffffff;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about img {
+            max-width: 150px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .about h3, .about h4 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html" class="navbar-brand">Tallerr Evaluativo PBD M O N N G O D B</a>
+        <a >INICIO</a>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+    </div>
+
+    <div class="carousel">
+        <div class="carousel-text">
+            <h1>La Mejor <span>Actividad</span></h1>
+            <img src="img/logo.jpeg" alt="Logo" width="150" height="150">
+            <div>
+                <a href="carros.html">Ver Carros</a> 
+                <a href="mercado.html">Ver Mercado</a> 
+                <a href="hoteles.html">Ver Hoteles</a> 
+                <a href="materiasUniversidad.html">Ver Materias Universidad</a>
+                <a href="restaurante.html">Ver Restaurante</a> 
+                <a href="contacto.html">Ver Contactos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="about-content">
+            <img src="img/unimar.png" alt="Logo Universidad Mariana">
+            <h2>Taller Evaluativo</h2>
+            <h3>Práctica de Bases de Datos - MongoDB</h3>
+            <h4>Ibarra Rosero Esneyder Jesús</h4>
+            <h4>Karen Julieth Perez Rivera</h4>
+            <p>Universidad Mariana</p>
+            <p>Programa de Ingeniería de Sistemas</p>
+            <p>San Juan de Pasto, 2024</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; Taller Final Bases de Datos con Operadores Lógicos en MongoDB. Todos los derechos reservados.</p>
+        <p>Diseñado por Karen Perez y Esneyder Ibarra</p>
+    </div>
+</body>
+<script>
+    function buscar() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        
+        const paginas = {
+            'inicio': 'index.html',
+            'carros': 'carros.html',
+            'mercado': 'mercado.html',
+            'hoteles': 'hoteles.html',
+            'materias universidad': 'materiasUniversidad.html',
+            'restaurante': 'restaurante.html',
+            'contactos': 'contacto.html'
+        };
+        
+        if (paginas[query]) {
+            window.location.href = paginas[query];
+        } else {
+            alert('Página no encontrada');
+        }
+    }
+</script>
+</html>

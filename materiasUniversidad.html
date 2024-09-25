@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PDB M O N N G O D B</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Restaurant Website" name="keywords">
+    <meta content="Restaurant Website" name="description">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet"> 
+    <style>
+      body {
+          font-family: 'Roboto', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #0A2A3E; /* Azul oscuro de fondo */
+          color: #D4AF37; /* Dorado para el texto */
+      }
+  
+      /* Barra de navegación */
+      .navbar {
+          background-color: #0A2A3E; /* Azul oscuro */
+          padding: 15px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+      }
+  
+      .navbar a {
+          color: #D4AF37; /* Dorado */
+          font-size: 18px;
+          text-decoration: none;
+          margin-right: 20px;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          padding: 10px 15px;
+          border-radius: 30px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+      }
+  
+      .navbar a:hover {
+          background-color: #F5DEB3; /* Beige al pasar cursor */
+          color: #FFFFFF; /* Blanco para el texto */
+      }
+  
+      .search-container input {
+          padding: 8px 12px;
+          border: 2px solid #D4AF37; /* Borde dorado */
+          border-radius: 20px;
+          font-size: 16px;
+          background-color: #0A2A3E; /* Fondo azul oscuro */
+          color: #FFFFFF; /* Texto blanco */
+          transition: border-color 0.3s ease;
+      }
+  
+      .search-container input:focus {
+          border-color: #8B4513; /* Marrón claro al hacer foco */
+          outline: none;
+      }
+  
+      .search-container button {
+          padding: 8px 15px;
+          border: none;
+          background-color: #D4AF37; /* Botón dorado */
+          border-radius: 20px;
+          cursor: pointer;
+          margin-left: 10px;
+          font-weight: bold;
+          color: #0A2A3E; /* Texto azul oscuro */
+          transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+  
+      .search-container button:hover {
+          background-color: #8B4513; /* Marrón claro al pasar el cursor */
+          transform: scale(1.05); /* Efecto de zoom */
+      }
+  
+      /* Carousel */
+      .carousel {
+          position: relative;
+          width: 100%;
+          height: 80vh;
+          overflow: hidden;
+          background-color: #0A2A3E; /* Fondo azul oscuro */
+      }
+  
+      .carousel-item {
+          position: relative;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-size: cover;
+          background-position: center;
+      }
+  
+      .carousel-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
+  
+      .carousel-text {
+          position: relative;
+          z-index: 10;
+          color: #D4AF37; /* Texto dorado */
+          text-align: center;
+      }
+  
+      .carousel-text h1 {
+          font-size: 48px;
+          font-family: 'Poppins', sans-serif;
+          margin-bottom: 20px;
+          background-color: rgba(10, 42, 62, 0.5); /* Fondo azul oscuro con opacidad */
+          padding: 10px 20px;
+          border-radius: 10px;
+      }
+  
+      .carousel-text a {
+          color: #0A2A3E; /* Azul oscuro */
+          background-color: #D4AF37; /* Dorado */
+          padding: 10px 20px;
+          margin: 5px;
+          border-radius: 30px;
+          font-weight: bold;
+          text-decoration: none;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+  
+      .carousel-text a:hover {
+          background-color: #F5DEB3; /* Beige claro */
+          transform: scale(1.05);
+      }
+  
+      .command-item {
+          background-color: #0A2A3E; /* Azul oscuro */
+          border: 2px solid #8B4513; /* Borde marrón claro */
+          border-radius: 10px;
+          padding: 15px;
+          margin-bottom: 20px; /* Espaciado entre los comandos */
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+      }
+  
+      .command-title {
+          color: #D4AF37; /* Dorado para el título */
+          margin: 10px 0; /* Espaciado superior e inferior */
+      }
+  
+      .command-description {
+          color: #D4AF37; /* Dorado para la descripción */
+      }
+  
+      .command-content {
+          border: 2px solid #8B4513; /* Borde marrón claro */
+          border-radius: 10px; /* Bordes redondeados */
+          padding: 15px; /* Espaciado interno */
+          margin-top: 10px; /* Espaciado superior */
+          display: block;
+      }
+  
+      .intro-text {
+          margin: 20px 0; /* Espaciado superior e inferior */
+          padding: 15px; /* Espaciado interno */
+          border: 1px solid #D4AF37; /* Borde dorado */
+          border-radius: 10px; /* Bordes redondeados */
+          background-color: #F5DEB3; /* Fondo beige claro */
+      }
+  </style>
+  
+  </head>
+
+<body>
+  <body>
+    <div class="navbar">
+      <a href="index.html" class="navbar-brand">Tallerr Evaluativo PBD M O N N G O D B</a>
+      <a >Materias Universidad</a>
+      <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Buscar...">
+          <button onclick="buscar()">Buscar</button>
+      </div>
+  </div>
+    <div class="carousel">
+        <div class="carousel-item">
+            <div class="carousel-img">
+                <img src="img/fonoduniver.jpeg" alt="Image">
+            </div>
+            <div class="carousel-text">
+                <h1>Cuarta Base de Datos <span>materias Universidad</span></h1>
+                <img src="img/universidadlogo.jpeg" alt="Logo" width="150" height="150">
+                <div>
+                    <a href="index.html">Inicio</a> 
+                    <a href="carros.html">Ver Carros</a>
+                    <a href="mercado.html">Ver Mercado</a> 
+                    <a href="hoteles.html">Ver Hoteles</a> 
+                    <a href="restaurante.html">Ver Restaurante</a> 
+                    <a href="contacto.html">Ver Contactos</a>
+                </div><br><br>
+            </div>
+        </div>
+    </div>
+
+  <div class="col-md-6">
+    <div class="command-item">
+      <div class="command-img">
+        <img style="width: 90%; height: 90%;" src="img/40DatosMateriasUniversidad.gif">
+      </div>
+      <div class="command-content">
+        <h2 class="command-title" >40 Datos con 10 Keys recurrentes </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6"></div>
+    <div class="command-item">
+      <div class="command-img">
+        <img style="width: 70%; height: 70%;" src="img/10comandosMateriasUniversidad.png">
+      </div>
+      <div class="command-content">
+        <h2 class="command-title">10 comandos</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+          <img style="width: 50%; height: 70%;" src="img/c1b4.png" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 1: db.materias.find({ nombre: { $eq: "programacion orientada a objetos" } });</h2>
+          <p class="command-description">muestra las materias con el nombre "programacion orientada a objetos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/c2b4.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 2: db.materias.find({ creditos: { $gt: 2 } }); </h2>
+          <p class="command-description">muestra las materias que tienen mas de 3 creditos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">  
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/c3bd4.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 3: db.materias.find({ horas_clases_teoricas: { $gte: 3 } });</h2>
+          <p class="command-description">muestra las materias que tienen 3 horas o mas de clases teroicas</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+        <img src="img/c4bd4.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 4: db.materias.find({ horas_clases_practicas: { $lt: 1 } });</h2>
+          <p class="command-description">muestra las materias que tienen menos de 1 hora de clases prácticas</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/c5bd4.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 5: db.materias.find({ codigo: { $lte: '105' } }) </h2>
+          <p class="command-description"> muestra las materias en donde su codigo es menor o igual a '105' tomando un valor numerico</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+             <img src="img/c6bd4.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 6: db.materias.find({ profesores_responsables: { $ne: 'luis castro' } });</h2>
+          <p class="command-description">muestra las materias que no tienen como profesor a 'luis castro' </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+             <img src="img/c7bd4.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 7: db.materias.find({ aulas_asignadas: { $in: ['aula 2101', 'aula 2201', 'aula 3301', 'aula 3001', 'aula 2801', 'aula 2301', 'aula 3901' ] } }); </h2>
+          <p class="command-description">muestra las materias que se encuentran en las aulas 'aula 2101', 'aula 2201', 'aula 3301', 'aula 3001', 'aula 2801', 'aula 2301', 'aula 3901'  </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+             <img src="img/c8bd4.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 8: db.materias.find({ promedio_calificaciones: { $nin: [4.5] } });</h2>
+          <p class="command-description">muestra las materias que no tienen promedio de 4.5</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+             <img src="img/c9bd4.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 9: db.materias.find();</h2>
+          <p class="command-description">muestra todas las materias de la base de datos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+             <img style="width: 50%; height: 70%;" src="img/c10bd4.png" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 10: db.materias.deleteOne({ nombre: "filosofia del derecho" });</h2>
+          <p class="command-description"> elimina la materia llamada "filosofia del derecho"</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br>
+    <div class="carousel-item">
+      <div class="carousel-text">
+        <div>
+          <a href="https://www.mycompiler.io/view/FEeTkoCFlEp">Link del Codigo en mycompiler</a>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  <div class="footer">
+    <p>Copyright &copy; Taller Final Bases de Datos con Operadores Logicos en Mongo DB. Todos los derechos reservados.</p>
+    <p>Designed By Karen Perez y Esneyder Ibarra</p>
+  </div>
+</body>
+<script>
+  function buscar() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      
+      const paginas = {
+          'inicio': 'index.html',
+          'carros': 'carros.html',
+          'mercado': 'mercado.html',
+          'hoteles': 'hoteles.html',
+          'materias universidad': 'materiasUniversidad.html',
+          'restaurante': 'restaurante.html',
+          'contactos': 'contacto.html'
+      };
+      
+      if (paginas[query]) {
+          window.location.href = paginas[query];
+      } else {
+          alert('Página no encontrada');
+      }
+  }
+</script>
+</html>

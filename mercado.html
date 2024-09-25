@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PDB M O N N G O D B</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Restaurant Website" name="keywords">
+    <meta content="Restaurant Website" name="description">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet"> 
+    <style>
+      
+        body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Fondo gris muy claro */
+    color: #333; /* Texto oscuro */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #ff8c42; /* Naranja suave */
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.navbar a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #f2f2f2; /* Fondo gris claro al pasar cursor */
+    color: #ff8c42; /* Naranja suave en texto al pasar cursor */
+}
+
+.search-container input {
+    padding: 8px 12px;
+    border: 2px solid #ff8c42; /* Borde naranja */
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Texto oscuro */
+    transition: border-color 0.3s ease;
+}
+
+.search-container input:focus {
+    border-color: #32cd32; /* Verde al hacer foco */
+    outline: none;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #32cd32; /* Botón verde */
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-container button:hover {
+    background-color: #28a745; /* Verde más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    background-color: #fff5e1; /* Fondo blanco con un toque de naranja */
+}
+
+.carousel-item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-text {
+    position: relative;
+    z-index: 10;
+    color: white;
+    text-align: center;
+}
+
+.carousel-text h1 {
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.carousel-text img {
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.carousel-text a {
+    color: white;
+    background-color: #32cd32; /* Verde */
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-text a:hover {
+    background-color: #ff8c42; /* Naranja suave al pasar el cursor */
+    transform: scale(1.05);
+}
+
+.command-item {
+    background-color: white; /* Blanco */
+    border: 2px solid #ff8c42; /* Borde naranja suave */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px; /* Espaciado entre los comandos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.command-title {
+    color: #ff8c42; /* Naranja suave para el título */
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+.command-description {
+    color: #1c1a1a; /* Gris oscuro para la descripción */
+}
+
+.command-content {
+    border: 2px solid #ff8c42; /* Borde naranja */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    margin-top: 10px; /* Espaciado superior */
+    display: block;
+}
+
+.intro-text {
+    margin: 20px 0; /* Espaciado superior e inferior */
+    padding: 15px; /* Espaciado interno */
+    border: 1px solid #ff8c42; /* Borde naranja suave */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #fff5e1; /* Fondo blanco con toque de naranja suave */
+}
+
+  </style>
+  </head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html" class="navbar-brand">Tallerr Evaluativo PBD M O N N G O D B</a>
+    <a >Super Mercado</a>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar...">
+        <button onclick="buscar()">Buscar</button>
+    </div>
+</div>
+
+<div class="carousel">
+  <div class="carousel-item">
+      <div class="carousel-img">
+          <img src="img/superbaner.jpeg" alt="Image">
+      </div>
+      <div class="carousel-text">
+        <h1>Super<span style="color: #ffbd22;">Mercado</span></h1>
+          <img src="img/Designer.jpeg" alt="Logo" width="150" height="150">
+          <div>
+              <a href="index.html">Inicio</a> 
+              <a href="carros.html">Ver Carros</a> 
+              <a href="hoteles.html">Ver Hoteles</a> 
+              <a href="materiasUniversidad.html">Ver Materias Universidad</a>
+              <a href="restaurante.html">Ver Restaurante</a> 
+              <a href="contacto.html">Ver Contactos</a>
+          </div><br><br>
+      </div>
+  </div>
+</div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+          <div class="command-content">
+              <h2 class="command-title">40 Datos con 10 Keys recurrentes</h2>
+              
+              <!-- Bloque de código desplazable con resaltado de sintaxis -->
+              <pre style="font-size: 12px; max-height: 300px; overflow-y: auto;">
+                  <code class="language-json">
+                    db.productos.insertMany([
+                    { nombre: 'arroz blanco', descripcion: 'arroz de grano largo, ideal para acompañamientos', precio: 2500, categoria: 'alimentos', disponibilidad: 100, marca: 'arroz diana', numero_modelo: '1234AB', peso: 1, unidades_vendidas: 300, valoracion_promedio: 4.5 },
+                    { nombre: 'frijoles rojos', descripcion: 'frijoles en grano, ricos en proteínas', precio: 3500, categoria: 'alimentos', disponibilidad: 75, marca: 'frijol del campo', numero_modelo: '5678CD', peso: 1, unidades_vendidas: 150, valoracion_promedio: 4.3 },
+                    { nombre: 'aceite vegetal', descripcion: 'aceite de girasol, ideal para cocinar', precio: 8000, categoria: 'alimentos', disponibilidad: 200, marca: 'la finca', numero_modelo: '9101EF', peso: 0.9, unidades_vendidas: 500, valoracion_promedio: 4.6 },
+                    { nombre: 'detergente en polvo', descripcion: 'detergente en polvo para ropa, elimina manchas difíciles', precio: 12000, categoria: 'limpieza', disponibilidad: 50, marca: 'fab', numero_modelo: '1123GH', peso: 2, unidades_vendidas: 80, valoracion_promedio: 4.8 },
+                    { nombre: 'papel higienico', descripcion: 'papel higienico de doble hoja, suave y resistente', precio: 9000, categoria: 'higiene personal', disponibilidad: 300, marca: 'familia', numero_modelo: '2345IJ', peso: 0.5, unidades_vendidas: 400, valoracion_promedio: 4.7 },
+                    { nombre: 'jabon antibacterial', descripcion: 'jabon líquido antibacterial para manos', precio: 6000, categoria: 'higiene personal', disponibilidad: 150, marca: 'protex', numero_modelo: '3456KL', peso: 0.3, unidades_vendidas: 220, valoracion_promedio: 4.5 },
+                    { nombre: 'shampoo anticaspa', descripcion: 'shampoo especializado en eliminar la caspa', precio: 14000, categoria: 'cuidado personal', disponibilidad: 100, marca: 'head & shoulders', numero_modelo: '4567MN', peso: 0.7, unidades_vendidas: 180, valoracion_promedio: 4.9 },
+                    { nombre: 'crema dental', descripcion: 'crema dental para el cuidado completo de los dientes', precio: 5000, categoria: 'cuidado personal', disponibilidad: 200, marca: 'colgate', numero_modelo: '5678OP', peso: 0.1, unidades_vendidas: 350, valoracion_promedio: 4.7 },
+                    { nombre: 'harina de maiz', descripcion: 'harina de maiz precocida, ideal para arepas', precio: 4000, categoria: 'alimentos', disponibilidad: 120, marca: 'harina pan', numero_modelo: '6789QR', peso: 1, unidades_vendidas: 270, valoracion_promedio: 4.8 },
+                    { nombre: 'leche en polvo', descripcion: 'leche en polvo entera, ideal para bebidas y postres', precio: 18000, categoria: 'alimentos', disponibilidad: 90, marca: 'colanta', numero_modelo: '7890ST', peso: 1, unidades_vendidas: 130, valoracion_promedio: 4.6 },
+                    { nombre: 'azucar refinada', descripcion: 'azucar blanca refinada para uso en repostería', precio: 2500, categoria: 'alimentos', disponibilidad: 250, marca: 'incauca', numero_modelo: '8901UV', peso: 1, unidades_vendidas: 450, valoracion_promedio: 4.7 },
+                    { nombre: 'café molido', descripcion: 'café 100% colombiano, de sabor intenso', precio: 12000, categoria: 'alimentos', disponibilidad: 80, marca: 'café águila roja', numero_modelo: '9012WX', peso: 0.5, unidades_vendidas: 200, valoracion_promedio: 4.9 },
+                    { nombre: 'mantequilla', descripcion: 'mantequilla fresca, ideal para cocinar o untar', precio: 5000, categoria: 'alimentos', disponibilidad: 150, marca: 'alpina', numero_modelo: '1123YZ', peso: 0.5, unidades_vendidas: 220, valoracion_promedio: 4.6 },
+                    { nombre: 'queso campesino', descripcion: 'queso fresco campesino, ideal para acompañar comidas', precio: 7000, categoria: 'alimentos', disponibilidad: 120, marca: 'colanta', numero_modelo: '2234AB', peso: 0.7, unidades_vendidas: 180, valoracion_promedio: 4.8 },
+                    { nombre: 'jugo de naranja', descripcion: 'jugo de naranja natural sin azúcar añadida', precio: 4000, categoria: 'bebidas', disponibilidad: 90, marca: 'del valle', numero_modelo: '3345CD', peso: 1, unidades_vendidas: 240, valoracion_promedio: 4.4 },
+                    { nombre: 'agua embotellada', descripcion: 'agua pura embotellada, ideal para refrescar', precio: 2000, categoria: 'bebidas', disponibilidad: 300, marca: 'cristal', numero_modelo: '4456EF', peso: 0.6, unidades_vendidas: 500, valoracion_promedio: 4.6 },
+                    { nombre: 'bebida energizante', descripcion: 'bebida energizante con cafeína y taurina', precio: 6000, categoria: 'bebidas', disponibilidad: 110, marca: 'red bull', numero_modelo: '5567GH', peso: 0.3, unidades_vendidas: 320, valoracion_promedio: 4.5 },
+                    { nombre: 'vino tinto', descripcion: 'vino tinto seco, ideal para acompañar carnes', precio: 40000, categoria: 'bebidas', disponibilidad: 50, marca: 'casillero del diablo', numero_modelo: '6678IJ', peso: 1, unidades_vendidas: 70, valoracion_promedio: 4.9 },
+                    { nombre: 'cerveza en lata', descripcion: 'cerveza rubia en lata, refrescante y ligera', precio: 3000, categoria: 'bebidas', disponibilidad: 250, marca: 'aguila', numero_modelo: '7789KL', peso: 0.35, unidades_vendidas: 400, valoracion_promedio: 4.7 },
+                    { nombre: 'gaseosa cola', descripcion: 'gaseosa de cola, refrescante y con burbujas', precio: 2500, categoria: 'bebidas', disponibilidad: 180, marca: 'coca cola', numero_modelo: '8890MN', peso: 0.5, unidades_vendidas: 350, valoracion_promedio: 4.8 },
+                    { nombre: 'pan integral', descripcion: 'pan integral, rico en fibra y nutrientes', precio: 6000, categoria: 'alimentos', disponibilidad: 90, marca: 'bimbo', numero_modelo: '9901OP', peso: 0.5, unidades_vendidas: 150, valoracion_promedio: 4.5 },
+                    { nombre: 'tortillas de maiz', descripcion: 'tortillas de maiz, ideales para tacos o acompañamientos', precio: 4000, categoria: 'alimentos', disponibilidad: 100, marca: 'mission', numero_modelo: '1122QR', peso: 0.4, unidades_vendidas: 200, valoracion_promedio: 4.6 },
+                    { nombre: 'salsa de tomate', descripcion: 'salsa de tomate, ideal para acompañar comidas', precio: 5000, categoria: 'alimentos', disponibilidad: 150, marca: 'heinz', numero_modelo: '2233ST', peso: 0.3, unidades_vendidas: 300, valoracion_promedio: 4.8 },
+                    { nombre: 'mayonesa', descripcion: 'mayonesa cremosa, ideal para ensaladas y sándwiches', precio: 4500, categoria: 'alimentos', disponibilidad: 130, marca: 'hellmanns', numero_modelo: '3344UV', peso: 0.3, unidades_vendidas: 250, valoracion_promedio: 4.7 },
+                    { nombre: 'leche deslactosada', descripcion: 'leche deslactosada, ideal para personas intolerantes a la lactosa', precio: 3000, categoria: 'alimentos', disponibilidad: 100, marca: 'alpina', numero_modelo: '4455WX', peso: 1, unidades_vendidas: 200, valoracion_promedio: 4.8 },
+                    { nombre: 'yogurt natural', descripcion: 'yogurt natural sin azúcar añadida', precio: 2500, categoria: 'alimentos', disponibilidad: 180, marca: 'colanta', numero_modelo: '5566YZ', peso: 0.5, unidades_vendidas: 320, valoracion_promedio: 4.6 },
+                    { nombre: 'atun enlatado', descripcion: 'atun enlatado en agua, ideal para ensaladas', precio: 5000, categoria: 'alimentos', disponibilidad: 150, marca: 'van camps', numero_modelo: '6677AB', peso: 0.2, unidades_vendidas: 400, valoracion_promedio: 4.7 },
+                    { nombre: 'sardinas en salsa', descripcion: 'sardinas en salsa de tomate, ricas en omega 3', precio: 3000, categoria: 'alimentos', disponibilidad: 200, marca: 'van camps', numero_modelo: '7788CD', peso: 0.3, unidades_vendidas: 350, valoracion_promedio: 4.5 },
+                    { nombre: 'chocolate en polvo', descripcion: 'chocolate en polvo, ideal para preparar bebidas calientes', precio: 8000, categoria: 'alimentos', disponibilidad: 70, marca: 'chocolisto', numero_modelo: '8899EF', peso: 0.5, unidades_vendidas: 100, valoracion_promedio: 4.9 },
+                    { nombre: 'miel de abeja', descripcion: 'miel de abeja pura, ideal para endulzar bebidas y comidas', precio: 15000, categoria: 'alimentos', disponibilidad: 40, marca: 'granjeros', numero_modelo: '9900GH', peso: 0.5, unidades_vendidas: 90, valoracion_promedio: 4.8 },
+                    { nombre: 'cereal de avena', descripcion: 'cereal de avena, ideal para desayunos saludables', precio: 9000, categoria: 'alimentos', disponibilidad: 150, marca: 'quaker', numero_modelo: '1011IJ', peso: 0.7, unidades_vendidas: 180, valoracion_promedio: 4.6 },
+                    { nombre: 'galletas de avena', descripcion: 'galletas de avena y pasas, ideales para meriendas', precio: 5000, categoria: 'alimentos', disponibilidad: 200, marca: 'quaker', numero_modelo: '1122KL', peso: 0.3, unidades_vendidas: 250, valoracion_promedio: 4.7 },
+                    { nombre: 'helado de chocolate', descripcion: 'helado cremoso de chocolate, ideal para postres', precio: 12000, categoria: 'postres', disponibilidad: 50, marca: 'cremosino', numero_modelo: '2233MN', peso: 1, unidades_vendidas: 100, valoracion_promedio: 4.8 },
+                    { nombre: 'manteca de cerdo', descripcion: 'manteca de cerdo para cocinar, ideal para frituras', precio: 4000, categoria: 'alimentos', disponibilidad: 60, marca: 'el rancho', numero_modelo: '3344OP', peso: 1, unidades_vendidas: 70, valoracion_promedio: 4.4 },
+                    { nombre: 'huevo', descripcion: 'huevos frescos, ricos en proteínas', precio: 12000, categoria: 'alimentos', disponibilidad: 150, marca: 'huevos kikes', numero_modelo: '4455QR', peso: 1.2, unidades_vendidas: 200, valoracion_promedio: 4.8 },
+                    { nombre: 'panela en bloque', descripcion: 'panela en bloque, ideal para bebidas o cocinar', precio: 3000, categoria: 'alimentos', disponibilidad: 130, marca: 'la abuela', numero_modelo: '5566ST', peso: 1, unidades_vendidas: 250, valoracion_promedio: 4.9 },
+                    { nombre: 'gelatina de frutas', descripcion: 'gelatina en polvo con sabor a frutas', precio: 2000, categoria: 'postres', disponibilidad: 90, marca: 'royal', numero_modelo: '6677UV', peso: 0.2, unidades_vendidas: 120, valoracion_promedio: 4.6 },
+                    { nombre: 'sal marina', descripcion: 'sal marina, ideal para sazonar alimentos', precio: 5000, categoria: 'alimentos', disponibilidad: 200, marca: 'salinas', numero_modelo: '7788WX', peso: 1, unidades_vendidas: 300, valoracion_promedio: 4.7 },
+                    { nombre: 'jugo de mango', descripcion: 'jugo natural de mango 100% sin azúcar añadida, ideal para refrescarse', precio: 4500, categoria: 'bebidas', disponibilidad: 80, marca: 'del valle', numero_modelo: 'JM2024', peso: 0.5, unidades_vendidas: 200, valoracion_promedio: 4.6 },
+                    { nombre: 'harina de maiz', descripcion: 'harina de maíz precocida, perfecta para preparar arepas y otros platos tradicionales', precio: 2500, categoria: 'alimentos', disponibilidad: 150, marca: 'pan', numero_modelo: 'HM100', peso: 1, unidades_vendidas: 500, valoracion_promedio: 4.9 }
+                  
+                  ]);
+                  </code>
+              </pre>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <div class="command-item">
+        <div class="command-content">
+            <h2 class="command-title">10 comandos</h2>
+            
+            <!-- Bloque de código desplazable con resaltado de sintaxis -->
+            <pre style="font-size: 12px; max-height: 300px; overflow-y: auto;">
+                <code class="language-json">
+
+                  // Mostrar un producto que tenga exactamente el nombre arroz blanco
+                  db.productos.find({ nombre: { $eq: 'arroz blanco' } });
+                  // Mostrar productos cuyo precio sea mayor que 10000, porque me interesa encontrar los más costosos
+                  db.productos.find({ precio: { $gt: 10000 } });
+                  // Mostrar todos los productos que tengan al menos 150 unidades disponibles en el inventario
+                  db.productos.find({ disponibilidad: { $gte: 150 } });
+                  // Revisar los productos con un número de modelo que sea menor a 5566YZ
+                  db.productos.find({ numero_modelo: { $lt: '5566YZ' } });
+                  // Buscar productos que pesen como máximo 1 kg
+                  db.productos.find({ peso: { $lte: 1 } });
+                  // Mostrar productos cuyas unidades vendidas no sean exactamente 300
+                  db.productos.find({ unidades_vendidas: { $ne: 300 } });
+                  // Buscar productos con una valoración promedio que esté entre 4.5 y 5
+                  db.productos.find({ valoracion_promedio: { $in: [4.5, 4.6, 4.7, 4.8, 4.9, 5] } });
+                  // Buscar los productos cuyo precio no esté dentro del rango de 2000 a 8000
+                  db.productos.find({ precio: { $nin: [2000, 3000, 4000, 5000, 6000, 7000, 8000] } });
+                  // Mostrar todos los productos que tengo en la colección, sin filtrar nada
+                  db.productos.find({});
+                  // Actualizar el precio del producto "aceite vegetal" para que ahora sea 8500
+                  db.productos.updateOne(
+                    { nombre: 'aceite vegetal' },
+                    { $set: { precio: 8500 } }
+                  );
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/OPERACION 1 SUPERMERCADO.png" alt="png">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 1: db.productos.find({ nombre: { $eq: 'arroz blanco' } });</h2>
+          <p class="command-description"> Mostrar un producto que tenga exactamente el nombre arroz blanco</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/OPERACION 2 SUPERMERCADO.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 2: db.productos.find({ precio: { $gt: 10000 } });</h2>
+          <p class="command-description">Mostrar productos cuyo precio sea mayor que 10000, porque me interesa encontrar los más costosos
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">  
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/OPERACION 3 SUPERMERCADO.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 3: db.productos.find({ disponibilidad: { $gte: 150 } });</h2>
+          <p class="command-description"> Mostrar todos los productos que tengan al menos 150 unidades disponibles en el inventario
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 4 SUPERMERCADO.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 4: db.productos.find({ numero_modelo: { $lt: '5566YZ' } });</h2>
+          <p class="command-description">// Revisar los productos con un número de modelo que sea menor a 5566YZ </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 5 SUPERMERCADO.gif"alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 5: db.productos.find({ peso: { $lte: 1 } });</h2>
+          <p class="command-description">Buscar productos que pesen como máximo 1 kg
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 6 SUPERMERCADO.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 6: db.productos.find({ unidades_vendidas: { $ne: 300 } });</h2>
+          <p class="command-description"> Mostrar productos cuyas unidades vendidas no sean exactamente 300</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 7 SUPERMERCADO.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 7: db.productos.find({ valoracion_promedio: { $in: [4.5, 4.6, 4.7, 4.8, 4.9, 5] } });
+          </h2>
+          <p class="command-description"> Buscar productos con una valoración promedio que esté entre 4.5 y 5
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 8 SUPERMERCADO.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 8: db.productos.find({ precio: { $nin: [2000, 3000, 4000, 5000, 6000, 7000, 8000] } });
+          </h2>
+          <p class="command-description"> Buscar los productos cuyo precio no esté dentro del rango de 2000 a 8000
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 9 SUPERMERCADO.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 9: db.productos.find({});</h2>
+          <p class="command-description"> Mostrar todos los productos que tengo en la colección, sin filtrar nada
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 10 SUPERMERCADO.png" alt="png">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 10:  db.productos.updateOne(
+            { nombre: 'aceite vegetal' },
+            { $set: { precio: 8500 } }
+          );</h2>
+          <p class="command-description">Actualizar el precio del producto "aceite vegetal" para que ahora sea 8500
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br>
+    <div class="carousel-item">
+      <div class="carousel-text">
+        <div>
+          <a href="https://www.mycompiler.io/view/AzlYFyI2rMp">Link del Codigo en mycompiler</a>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  <div class="footer">
+    <p>Copyright &copy; Taller Final Bases de Datos con Operadores Logicos en Mongo DB. Todos los derechos reservados.</p>
+    <p>Designed By Karen Perez y Esneyder Ibarra</p>
+  </div>
+</body>
+<script>
+  function buscar() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      
+      const paginas = {
+          'inicio': 'index.html',
+          'carros': 'carros.html',
+          'mercado': 'mercado.html',
+          'hoteles': 'hoteles.html',
+          'materias universidad': 'materiasUniversidad.html',
+          'restaurante': 'restaurante.html',
+          'contactos': 'contacto.html'
+      };
+      
+      if (paginas[query]) {
+          window.location.href = paginas[query];
+      } else {
+          alert('Página no encontrada');
+      }
+  }
+</script>
+</html>

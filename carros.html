@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PDB M O N N G O D B</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Restaurant Website" name="keywords">
+    <meta content="Restaurant Website" name="description">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet"> 
+    <style>
+      body {
+          font-family: 'Roboto', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f2f2f2; /* Gris claro de fondo */
+          color: #333; /* Texto oscuro */
+      }
+
+      /* Barra de navegación */
+      .navbar {
+          background-color: #b22222; /* Rojo fuerte */
+          padding: 15px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+      }
+
+      .navbar a {
+          color: white;
+          font-size: 18px;
+          text-decoration: none;
+          margin-right: 20px;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          padding: 10px 15px;
+          border-radius: 30px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .navbar a:hover {
+          background-color: #f2f2f2; /* Fondo gris claro al pasar cursor */
+          color: #b22222; /* Rojo fuerte en texto al pasar cursor */
+      }
+
+      .search-container input {
+          padding: 8px 12px;
+          border: 2px solid #b22222; /* Borde rojo */
+          border-radius: 20px;
+          font-size: 16px;
+          background-color: #f2f2f2; /* Fondo gris claro */
+          color: #333; /* Texto oscuro */
+          transition: border-color 0.3s ease;
+      }
+
+      .search-container input:focus {
+          border-color: #ff6347; /* Rojo tomate al hacer foco */
+          outline: none;
+      }
+
+      .search-container button {
+          padding: 8px 15px;
+          border: none;
+          background-color: #ff6347; /* Botón rojo tomate */
+          border-radius: 20px;
+          cursor: pointer;
+          margin-left: 10px;
+          font-weight: bold;
+          color: white;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .search-container button:hover {
+          background-color: #e60000; /* Más oscuro al pasar el cursor */
+          transform: scale(1.05); /* Efecto de zoom */
+      }
+
+      /* Carousel */
+      .carousel {
+          position: relative;
+          width: 100%;
+          height: 80vh;
+          overflow: hidden;
+          background-color: #f2f2f2; /* Fondo gris claro */
+      }
+
+      .carousel-item {
+          position: relative;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-size: cover;
+          background-position: center;
+      }
+
+      .carousel-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
+
+      .carousel-text {
+          position: relative;
+          z-index: 10;
+          color: white;
+          text-align: center;
+      }
+
+      .carousel-text h1 {
+          font-size: 48px;
+          font-family: 'Poppins', sans-serif;
+          margin-bottom: 20px;
+          background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+          padding: 10px 20px;
+          border-radius: 10px;
+      }
+
+
+      .carousel-text img {
+          margin-top: 20px;
+          border-radius: 50%;
+      }
+
+      .carousel-text a {
+          color: white;
+          background-color: #b22222; /* Rojo fuerte */
+          padding: 10px 20px;
+          margin: 5px;
+          border-radius: 30px;
+          font-weight: bold;
+          text-decoration: none;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .carousel-text a:hover {
+          background-color: white; /* Rojo tomate */
+          transform: scale(1.05);
+      }
+      .command-item {
+    background-color: white; /* Rojo tomate */
+    border: 2px solid #ff6347;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px; /* Espaciado entre los comandos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.command-title {
+    color: #ff6347; /* Texto blanco para el título */
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+.command-description {
+    color: #1c1a1a; /* Gris claro para la descripción */
+}
+
+.command-content {
+    border: 2px solid #ff6347; /* Borde rojo */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    margin-top: 10px; /* Espaciado superior */
+    display: block;
+    
+}
+
+.intro-text {
+    margin: 20px 0; /* Espaciado superior e inferior */
+    padding: 15px; /* Espaciado interno */
+    border: 1px solid #ff6347; /* Borde rojo */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+  </style>
+  </head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html" class="navbar-brand">Tallerr Evaluativo PBD M O N N G O D B</a>
+    <a >Carros</a>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar...">
+        <button onclick="buscar()">Buscar</button>
+    </div>
+</div>
+
+    <div class="carousel">
+        <div class="carousel-item">
+            <div class="carousel-img">
+                <img src="img/fondo.jpg" alt="Image">
+            </div>
+            <div class="carousel-text">
+              <h1>Primera Base de Datos <span style="color: #ff6347;">Carros</span></h1>
+                <img src="img/WhatsApp Image 2024-09-25 at 1.33.42 AM-fotor-202409251352.jpg" alt="Logo" width="150" height="150">
+                <div>
+                    <a href="index.html">Inicio</a> 
+                    <a href="mercado.html">Ver Mercado</a> 
+                    <a href="hoteles.html">Ver Hoteles</a> 
+                    <a href="materiasUniversidad.html">Ver Materias Universidad</a>
+                    <a href="restaurante.html">Ver Restaurante</a> 
+                    <a href="contacto.html">Ver Contactos</a>
+                </div><br><br>
+            </div>
+        </div>
+    </div>
+    <div class="intro-text">
+      <h2>Sobre BDCARS</h2>
+      <p>
+          BDCARS es una innovadora empresa dedicada a la venta y alquiler de vehículos. 
+          Nuestra base de datos permite a los usuarios realizar consultas eficaces sobre 
+          el inventario de autos, facilitando la búsqueda por características específicas. 
+          Con un enfoque en la eficiencia y la facilidad de uso, BDCARS ofrece una 
+          plataforma intuitiva para que los clientes encuentren el carro que mejor se adapte a sus necesidades.
+      </p>
+  </div>
+    <div class="col-md-6">
+      <div class="command-item">
+          <div class="command-content">
+              <h2 class="command-title">40 Datos con 10 Keys recurrentes</h2>
+              
+              <!-- Bloque de código desplazable con resaltado de sintaxis -->
+              <pre style="font-size: 12px; max-height: 300px; overflow-y: auto;">
+                  <code class="language-json">
+  {
+    db.cars.insertMany([
+    { marca: 'toyota', modelo: 'corolla', año_fabricacion: 2015, precio: 52000000, consumo_combustible: 7.5, color: 'gris', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 132, sistema_seguridad: 'airbags, ABS, control de tracción' },
+    { marca: 'honda', modelo: 'civic', año_fabricacion: 2016, precio: 68000000, consumo_combustible: 7.0, color: 'blanco', capacidad_pasajeros: 5, tipo_transmision: 'manual', potencia_motor: 158, sistema_seguridad: 'airbags, frenos de disco en las 4 ruedas, control de estabilidad' },
+    { marca: 'nissan', modelo: 'sentra', año_fabricacion: 2017, precio: 75000000, consumo_combustible: 6.8, color: 'negro', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 149, sistema_seguridad: 'airbags, ABS, alerta de cambio de carril' },
+    { marca: 'mazda', modelo: 'mazda 3', año_fabricacion: 2018, precio: 81000000, consumo_combustible: 7.2, color: 'azul', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 186, sistema_seguridad: 'control de tracción, ABS, asistente de arranque en pendientes' },
+    { marca: 'chevrolet', modelo: 'malibu', año_fabricacion: 2019, precio: 89000000, consumo_combustible: 7.6, color: 'rojo', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 160, sistema_seguridad: 'airbags, control de estabilidad, frenos ABS' },
+    { marca: 'ford', modelo: 'fusion', año_fabricacion: 2020, precio: 95000000, consumo_combustible: 8.0, color: 'plata', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 175, sistema_seguridad: 'airbags, monitoreo de punto ciego, ABS' },
+    { marca: 'hyundai', modelo: 'elantra', año_fabricacion: 2021, precio: 104000000, consumo_combustible: 7.1, color: 'gris', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 147, sistema_seguridad: 'airbags, control de estabilidad, cámara de reversa' },
+    { marca: 'kia', modelo: 'optima', año_fabricacion: 2022, precio: 110000000, consumo_combustible: 7.4, color: 'blanco', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 178, sistema_seguridad: 'control de estabilidad, ABS, asistente de frenado de emergencia' },
+    { marca: 'volkswagen', modelo: 'jetta', año_fabricacion: 2023, precio: 118000000, consumo_combustible: 7.5, color: 'negro', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 158, sistema_seguridad: 'airbags, control de tracción, monitoreo de presión de neumáticos' },
+    { marca: 'audi', modelo: 'a4', año_fabricacion: 2014, precio: 125000000, consumo_combustible: 7.3, color: 'gris', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 188, sistema_seguridad: 'airbags, ABS, control de estabilidad, asistente de colisión frontal' },
+    { marca: 'bmw', modelo: 'serie 3', año_fabricacion: 2013, precio: 135000000, consumo_combustible: 8.0, color: 'blanco', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 255, sistema_seguridad: 'airbags, frenado autónomo de emergencia, asistente de mantenimiento de carril' },
+    { marca: 'mercedes-benz', modelo: 'clase c', año_fabricacion: 2012, precio: 145000000, consumo_combustible: 7.8, color: 'negro', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 241, sistema_seguridad: 'airbags, ABS, control de estabilidad, monitoreo de punto ciego' },
+    { marca: 'porsche', modelo: 'panamera', año_fabricacion: 2021, precio: 460000000, consumo_combustible: 9.5, color: 'azul', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 330, sistema_seguridad: 'control de tracción, ABS, sistema de detección de peatones' },
+    { marca: 'tesla', modelo: 'model s', año_fabricacion: 2020, precio: 500000000, consumo_combustible: 0, color: 'rojo', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 1020, sistema_seguridad: 'autopilot, control de estabilidad, airbags, ABS' },
+    { marca: 'mitsubishi', modelo: 'lancer', año_fabricacion: 2018, precio: 76000000, consumo_combustible: 7.1, color: 'plata', capacidad_pasajeros: 5, tipo_transmision: 'manual', potencia_motor: 148, sistema_seguridad: 'frenos ABS, airbags, control de estabilidad' },
+    { marca: 'subaru', modelo: 'impreza', año_fabricacion: 2019, precio: 82000000, consumo_combustible: 7.3, color: 'blanco', capacidad_pasajeros: 5, tipo_transmision: 'manual', potencia_motor: 152, sistema_seguridad: 'control de tracción, airbags, ABS, asistente de arranque en pendiente' },
+    { marca: 'jeep', modelo: 'wrangler', año_fabricacion: 2021, precio: 185000000, consumo_combustible: 10.0, color: 'verde', capacidad_pasajeros: 5, tipo_transmision: 'manual', potencia_motor: 285, sistema_seguridad: 'airbags, frenos ABS, cámara de reversa, control de estabilidad' },
+    { marca: 'land rover', modelo: 'defender', año_fabricacion: 2022, precio: 370000000, consumo_combustible: 12.0, color: 'gris', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 395, sistema_seguridad: 'airbags, sistema de detección de peatones, control de estabilidad' },
+    { marca: 'volvo', modelo: 'xc90', año_fabricacion: 2021, precio: 320000000, consumo_combustible: 9.8, color: 'azul', capacidad_pasajeros: 7, tipo_transmision: 'automática', potencia_motor: 316, sistema_seguridad: 'asistente de colisión, control de estabilidad, airbags' },
+    { marca: 'alfa romeo', modelo: 'giulia', año_fabricacion: 2020, precio: 260000000, consumo_combustible: 8.4, color: 'rojo', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 280, sistema_seguridad: 'airbags, monitoreo de punto ciego, asistente de colisión' },
+    { marca: 'renault', modelo: 'koleos', año_fabricacion: 2015, precio: 105000000, consumo_combustible: 7.9, color: 'azul', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 170, sistema_seguridad: 'airbags, control de estabilidad, frenos ABS' },
+    { marca: 'peugeot', modelo: '308', año_fabricacion: 2014, precio: 98000000, consumo_combustible: 7.4, color: 'rojo', capacidad_pasajeros: 5, tipo_transmision: 'manual', potencia_motor: 155, sistema_seguridad: 'airbags, control de tracción, alerta de cambio de carril' },
+    { marca: 'fiat', modelo: 'tipo', año_fabricacion: 2016, precio: 88000000, consumo_combustible: 6.9, color: 'blanco', capacidad_pasajeros: 5, tipo_transmision: 'manual', potencia_motor: 120, sistema_seguridad: 'airbags, ABS, asistente de frenado de emergencia' },
+    { marca: 'mini', modelo: 'cooper', año_fabricacion: 2022, precio: 120000000, consumo_combustible: 6.5, color: 'verde', capacidad_pasajeros: 4, tipo_transmision: 'automática', potencia_motor: 189, sistema_seguridad: 'airbags, frenos ABS, sistema de detección de peatones' },
+    { marca: 'suzuki', modelo: 'swift', año_fabricacion: 2018, precio: 60000000, consumo_combustible: 6.2, color: 'azul', capacidad_pasajeros: 5, tipo_transmision: 'manual', potencia_motor: 110, sistema_seguridad: 'airbags, ABS, control de estabilidad' },
+    { marca: 'gmc', modelo: 'acadia', año_fabricacion: 2020, precio: 210000000, consumo_combustible: 8.9, color: 'negro', capacidad_pasajeros: 7, tipo_transmision: 'automática', potencia_motor: 310, sistema_seguridad: 'airbags, control de tracción, sistema de monitoreo de punto ciego' },
+    { marca: 'cadillac', modelo: 'xt5', año_fabricacion: 2021, precio: 340000000, consumo_combustible: 9.2, color: 'plata', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 310, sistema_seguridad: 'airbags, frenado autónomo de emergencia, asistente de mantenimiento de carril' },
+    { marca: 'lincoln', modelo: 'aviator', año_fabricacion: 2022, precio: 420000000, consumo_combustible: 9.5, color: 'blanco', capacidad_pasajeros: 7, tipo_transmision: 'automática', potencia_motor: 400, sistema_seguridad: 'airbags, control de estabilidad, sistema de detección de peatones' },
+    { marca: 'dodge', modelo: 'durango', año_fabricacion: 2019, precio: 290000000, consumo_combustible: 10.8, color: 'rojo', capacidad_pasajeros: 7, tipo_transmision: 'automática', potencia_motor: 293, sistema_seguridad: 'airbags, control de tracción, monitoreo de punto ciego' },
+    { marca: 'chrysler', modelo: 'pacifica', año_fabricacion: 2020, precio: 250000000, consumo_combustible: 9.0, color: 'gris', capacidad_pasajeros: 7, tipo_transmision: 'automática', potencia_motor: 287, sistema_seguridad: 'airbags, ABS, alerta de tráfico cruzado trasero' },
+    { marca: 'buick', modelo: 'encore', año_fabricacion: 2017, precio: 170000000, consumo_combustible: 7.6, color: 'negro', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 153, sistema_seguridad: 'airbags, ABS, cámara de reversa, control de estabilidad' },
+    { marca: 'infiniti', modelo: 'qx50', año_fabricacion: 2019, precio: 310000000, consumo_combustible: 8.7, color: 'azul', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 268, sistema_seguridad: 'control de estabilidad, monitoreo de punto ciego, frenado autónomo de emergencia' },
+    { marca: 'lexus', modelo: 'nx', año_fabricacion: 2021, precio: 380000000, consumo_combustible: 8.9, color: 'blanco', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 235, sistema_seguridad: 'airbags, asistente de colisión, ABS, monitoreo de presión de neumáticos' },
+    { marca: 'jaguar', modelo: 'f-pace', año_fabricacion: 2020, precio: 450000000, consumo_combustible: 9.4, color: 'rojo', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 296, sistema_seguridad: 'airbags, control de estabilidad, asistente de arranque en pendiente' },
+    { marca: 'maserati', modelo: 'levante', año_fabricacion: 2022, precio: 620000000, consumo_combustible: 10.3, color: 'gris', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 345, sistema_seguridad: 'control de tracción, airbags, frenos ABS, monitoreo de punto ciego' },
+    { marca: 'genesis', modelo: 'gv80', año_fabricacion: 2021, precio: 370000000, consumo_combustible: 9.6, color: 'negro', capacidad_pasajeros: 7, tipo_transmision: 'automática', potencia_motor: 300, sistema_seguridad: 'airbags, ABS, monitoreo de presión de neumáticos, alerta de cambio de carril' },
+    { marca: 'bentley', modelo: 'bentayga', año_fabricacion: 2022, precio: 950000000, consumo_combustible: 11.5, color: 'verde', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 542, sistema_seguridad: 'airbags, control de estabilidad, monitoreo de punto ciego, cámara de 360 grados' },
+    { marca: 'rolls-royce', modelo: 'cullinan', año_fabricacion: 2021, precio: 1100000000, consumo_combustible: 12.1, color: 'azul', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 563, sistema_seguridad: 'frenado autónomo, control de tracción, detección de peatones, airbags' },
+    { marca: 'aston martin', modelo: 'dbx', año_fabricacion: 2020, precio: 1000000000, consumo_combustible: 12.5, color: 'negro', capacidad_pasajeros: 5, tipo_transmision: 'automática', potencia_motor: 542, sistema_seguridad: 'airbags, frenos ABS, control de tracción, sistema de detección de peatones' },
+    { marca: 'bugatti', modelo: 'chiron', año_fabricacion: 2022, precio: 1150000000, consumo_combustible: 15.6, color: 'rojo', capacidad_pasajeros: 2, tipo_transmision: 'automática', potencia_motor: 1500, sistema_seguridad: 'airbags, control de estabilidad, control de tracción, ABS' }
+  
+  ])
+  }
+                  </code>
+              </pre>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <div class="command-item">
+        <div class="command-content">
+            <h2 class="command-title">10 comandos</h2>
+            
+            <!-- Bloque de código desplazable con resaltado de sintaxis -->
+            <pre style="font-size: 12px; max-height: 300px; overflow-y: auto;">
+                <code class="language-json">
+
+  // Buscar todos los carros que tengan el color rojo
+  db.cars.find({ color: { $eq: 'rojo' } });
+  
+  // Buscar los carros que se fabricaron después del año 2018
+  db.cars.find({ año_fabricacion: { $gt: 2018 } });
+  
+  // MOstrar todos los carros que tengan un precio mayor o igual a 200 millones de pesos
+  db.cars.find({ precio: { $gte: 200000000 } });
+  
+  // Mostrar los carros que tienen menos de 5 asientos para pasajeros
+  db.cars.find({ capacidad_pasajeros: { $lt: 5 } });
+  
+  // Buscar carros cuya potencia del motor sea de máximo 150 caballos de fuerza
+  db.cars.find({ potencia_motor: { $lte: 150 } });
+  
+  // Mostrar todos los carros que no sean de la marca Toyota
+  db.cars.find({ marca: { $ne: 'toyota' } });
+  
+  // Buscar carros que tengan alguno de estos colores: rojo, blanco o azul
+  db.cars.find({ color: { $in: ['rojo', 'blanco', 'azul'] } });
+  
+  // Mostrar los carros que no sean de las marcas Ford o Chevrolet
+  db.cars.find({ marca: { $nin: ['ford', 'chevrolet'] } });
+  
+  // buscar autos cuyo año de fabricación no esté entre 2020 y 2022.
+  db.collection.find({
+    'año_fabricacion': { $nin: [2020, 2021, 2022] } })
+  
+  // Eliminar el carro cuyo modelo es 'renault koleos'
+  db.cars.deleteOne({ modelo: 'koleos' });
+
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/OPERACION 1 CARS.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title"> Comando 1: db.cars.find({ color: { $eq: 'rojo' } });</h2>
+          <p class="command-description"> Buscar todos los carros que tengan el color rojo </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/OPERACION 2 CARS.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 2: db.cars.find({ año_fabricacion: { $gt: 2018 } });</h2>
+          <p class="command-description">Buscar los carros que se fabricaron después del año 2018</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">  
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/OPERACION 3 CARS.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 3: db.cars.find({ precio: { $gte: 200000000 } }); </h2>
+          <p class="command-description"> MOstrar todos los carros que tengan un precio mayor o igual a 200 millones de pesos. </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 4 CARS.png" alt="png">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 4: db.cars.find({ capacidad_pasajeros: { $lt: 5 } });</h2>
+          <p class="command-description">Mostrar los carros que tienen menos de 5 asientos para pasajeros </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 5 CARS.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 5: db.cars.find({ potencia_motor: { $lte: 150 } });</h2>
+          <p class="command-description"> Buscar carros cuya potencia del motor sea de máximo 150 caballos de fuerza </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 6 CARS.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 6: db.cars.find({ marca: { $ne: 'toyota' } });</h2>
+          <p class="command-description">Mostrar todos los carros que no sean de la marca Toyota </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 7 CARS.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 7: db.cars.find({ color: { $in: ['rojo', 'blanco', 'azul'] } });</h2>
+          <p class="command-description"> Buscar carros que tengan alguno de estos colores: rojo, blanco o azul </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 8 CARS.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 8: db.cars.find({ marca: { $nin: ['ford', 'chevrolet'] } });</h2>
+          <p class="command-description">Mostrar los carros que no sean de las marcas Ford o Chevrolet</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 9 CARS.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 9: db.collection.find({
+            'año_fabricacion': { $nin: [2020, 2021, 2022] } })</h2>
+          <p class="command-description">buscar autos cuyo año de fabricación no esté entre 2020 y 2022.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 10 CARS.png" alt="png">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 10: db.cars.deleteOne({ modelo: 'koleos' });
+          </h2>
+          <p class="command-description">Eliminar el carro cuyo modelo es 'renault koleos' </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br>
+    <div class="carousel-item">
+      <div class="carousel-text">
+        <div>
+          <a href="https://www.mycompiler.io/view/HzHnu5aJtxB">Link del Codigo en mycompiler</a>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  <div class="footer">
+    <p>Copyright &copy; Taller Final Bases de Datos con Operadores Logicos en Mongo DB. Todos los derechos reservados.</p>
+    <p>Designed By Karen Perez y Esneyder Ibarra</p>
+  </div>
+</body>
+<script>
+    function buscar() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        
+        const paginas = {
+            'inicio': 'index.html',
+            'carros': 'carros.html',
+            'mercado': 'mercado.html',
+            'hoteles': 'hoteles.html',
+            'materias universidad': 'materiasUniversidad.html',
+            'restaurante': 'restaurante.html',
+            'contactos': 'contacto.html'
+        };
+        
+        if (paginas[query]) {
+            window.location.href = paginas[query];
+        } else {
+            alert('Página no encontrada');
+        }
+    }
+</script>
+</html>

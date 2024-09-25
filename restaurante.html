@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PDB M O N N G O D B</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Restaurant Website" name="keywords">
+    <meta content="Restaurant Website" name="description">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet"> 
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0A2A3E; /* Azul oscuro de fondo */
+        color: #D4AF37; /* Dorado para el texto */
+    }
+
+    /* Barra de navegación */
+    .navbar {
+        background-color: #0A2A3E; /* Azul oscuro */
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+
+    .navbar a {
+        color: #D4AF37; /* Dorado */
+        font-size: 18px;
+        text-decoration: none;
+        margin-right: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        padding: 10px 15px;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background-color: #F5DEB3; /* Beige al pasar cursor */
+        color: #FFFFFF; /* Blanco para el texto */
+    }
+
+    .search-container input {
+        padding: 8px 12px;
+        border: 2px solid #D4AF37; /* Borde dorado */
+        border-radius: 20px;
+        font-size: 16px;
+        background-color: #0A2A3E; /* Fondo azul oscuro */
+        color: #FFFFFF; /* Texto blanco */
+        transition: border-color 0.3s ease;
+    }
+
+    .search-container input:focus {
+        border-color: #8B4513; /* Marrón claro al hacer foco */
+        outline: none;
+    }
+
+    .search-container button {
+        padding: 8px 15px;
+        border: none;
+        background-color: #D4AF37; /* Botón dorado */
+        border-radius: 20px;
+        cursor: pointer;
+        margin-left: 10px;
+        font-weight: bold;
+        color: #0A2A3E; /* Texto azul oscuro */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .search-container button:hover {
+        background-color: #8B4513; /* Marrón claro al pasar el cursor */
+        transform: scale(1.05); /* Efecto de zoom */
+    }
+
+    /* Carousel */
+    .carousel {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        overflow: hidden;
+        background-color: #0A2A3E; /* Fondo azul oscuro */
+    }
+
+    .carousel-item {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .carousel-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .carousel-text {
+        position: relative;
+        z-index: 10;
+        color: #D4AF37; /* Texto dorado */
+        text-align: center;
+    }
+
+    .carousel-text h1 {
+        font-size: 48px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20px;
+        background-color: rgba(10, 42, 62, 0.5); /* Fondo azul oscuro con opacidad */
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .carousel-text a {
+        color: #0A2A3E; /* Azul oscuro */
+        background-color: #D4AF37; /* Dorado */
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .carousel-text a:hover {
+        background-color: #F5DEB3; /* Beige claro */
+        transform: scale(1.05);
+    }
+
+    .command-item {
+        background-color: #0A2A3E; /* Azul oscuro */
+        border: 2px solid #8B4513; /* Borde marrón claro */
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px; /* Espaciado entre los comandos */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+
+    .command-title {
+        color: #D4AF37; /* Dorado para el título */
+        margin: 10px 0; /* Espaciado superior e inferior */
+        
+    }
+
+    .command-description {
+        color: #D4AF37; /* Dorado para la descripción */
+    }
+
+    .command-content {
+        border: 2px solid #8B4513; /* Borde marrón claro */
+        border-radius: 10px; /* Bordes redondeados */
+        padding: 15px; /* Espaciado interno */
+        margin-top: 10px; /* Espaciado superior */
+        display: block;
+    }
+
+    .intro-text {
+        margin: 20px 0; /* Espaciado superior e inferior */
+        padding: 15px; /* Espaciado interno */
+        border: 1px solid #D4AF37; /* Borde dorado */
+        border-radius: 10px; /* Bordes redondeados */
+        background-color: #F5DEB3; /* Fondo beige claro */
+    }
+</style>
+
+  </head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html" class="navbar-brand">Tallerr Evaluativo PBD M O N N G O D B</a>
+    <a >Restaurante</a>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar...">
+        <button onclick="buscar()">Buscar</button>
+    </div>
+</div>
+
+    <div class="carousel">
+        <div class="carousel-item">
+            <div class="carousel-img">
+                <img src="img/fondo restaurante kar.jpeg" alt="Image">
+            </div>
+            <div class="carousel-text">
+                <h1>Quinta Base de Datos <span>Restaurante</span></h1>
+                <img src="img/RESTAURANTEE.jpeg" alt="Logo" width="150" height="150">
+                <div>
+                    <a href="index.html">Inicio</a> 
+                    <a href="carros.html">Ver Carros</a> 
+                    <a href="mercado.html">Ver Mercado</a> 
+                    <a href="hoteles.html">Ver Hoteles</a> 
+                    <a href="materiasUniversidad.html">Ver Materias Universidad</a>
+                    <a href="contacto.html">Ver Contactos</a>
+                </div><br><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+          <div class="command-content">
+              <h2 class="command-title">40 Datos con 10 Keys recurrentes</h2>
+              
+              <!-- Bloque de código desplazable con resaltado de sintaxis -->
+              <pre style="font-size: 12px; max-height: 300px; overflow-y: auto;">
+                  <code class="language-json">
+                    db.menu.insertMany([
+                    { nombre: 'arepa con queso', descripcion: 'deliciosa arepa rellena de queso fresco, acompañada de guacamole y hogao', precio: 8000, categoria: 'entradas', tiempo_preparacion: 15, calorias: 250, ingredientes_principales: 'arepa, queso fresco, guacamole, hogao', nivel_picante: 'suave', disponibilidad: 20, popularidad: 85 },
+                    { nombre: 'bandeja paisa', descripcion: 'plato tradicional que incluye arroz, frijoles, carne asada, chicharron, huevo frito y aguacate', precio: 25000, categoria: 'platos principales', tiempo_preparacion: 45, calorias: 1200, ingredientes_principales: 'arroz, frijoles, carne asada, chicharron, huevo, aguacate', nivel_picante: 'medio', disponibilidad: 15, popularidad: 90 },
+                    { nombre: 'sancocho', descripcion: 'sopa sustanciosa de carne, platanos y yuca, cocida lentamente con especias', precio: 18000, categoria: 'platos principales', tiempo_preparacion: 60, calorias: 600, ingredientes_principales: 'carne, platanos, yuca, especias', nivel_picante: 'suave', disponibilidad: 10, popularidad: 80 },
+                    { nombre: 'ajiaco', descripcion: 'sopa cremosa hecha con tres tipos de papa y pollo, acompañada de aguacate y alcaparras', precio: 20000, categoria: 'platos principales', tiempo_preparacion: 50, calorias: 500, ingredientes_principales: 'pollo, papas, aguacate, alcaparras', nivel_picante: 'suave', disponibilidad: 12, popularidad: 75 },
+                    { nombre: 'empanadas', descripcion: 'masa frita rellena de carne o pollo, servidas con ají', precio: 7000, categoria: 'entradas', tiempo_preparacion: 30, calorias: 300, ingredientes_principales: 'masa, carne, pollo, ají', nivel_picante: 'medio', disponibilidad: 30, popularidad: 88 },
+                    { nombre: 'bocadillo veleño', descripcion: 'dulce de guayaba con queso, ideal para postre', precio: 5000, categoria: 'postres', tiempo_preparacion: 10, calorias: 150, ingredientes_principales: 'guayaba, queso', nivel_picante: 'suave', disponibilidad: 25, popularidad: 70 },
+                    { nombre: 'tamales', descripcion: 'masa de maiz rellena de carne y verduras, cocida en hojas de plátano', precio: 15000, categoria: 'platos principales', tiempo_preparacion: 70, calorias: 400, ingredientes_principales: 'maiz, carne, verduras', nivel_picante: 'medio', disponibilidad: 18, popularidad: 65 },
+                    { nombre: 'patacones', descripcion: 'plátanos verdes fritos, servidos con guacamole y hogao', precio: 9000, categoria: 'entradas', tiempo_preparacion: 25, calorias: 350, ingredientes_principales: 'plátanos, guacamole, hogao', nivel_picante: 'suave', disponibilidad: 22, popularidad: 76 },
+                    { nombre: 'choclo con queso', descripcion: 'mazorca de maiz tierno servida con queso fresco', precio: 6000, categoria: 'entradas', tiempo_preparacion: 10, calorias: 200, ingredientes_principales: 'mazorca, queso fresco', nivel_picante: 'suave', disponibilidad: 30, popularidad: 83 },
+                    { nombre: 'lemon pie', descripcion: 'pastel de limon con merengue, fresco y delicioso', precio: 10000, categoria: 'postres', tiempo_preparacion: 40, calorias: 350, ingredientes_principales: 'limon, merengue, galleta', nivel_picante: 'suave', disponibilidad: 20, popularidad: 77 },
+                    { nombre: 'carne a la llanera', descripcion: 'carne de res asada a la parrilla, acompañada de yuca y platanos', precio: 30000, categoria: 'platos principales', tiempo_preparacion: 50, calorias: 800, ingredientes_principales: 'carne, yuca, platanos', nivel_picante: 'medio', disponibilidad: 15, popularidad: 82 },
+                    { nombre: 'bandeja de mariscos', descripcion: 'variedad de mariscos frescos, cocidos y sazonados', precio: 35000, categoria: 'platos principales', tiempo_preparacion: 40, calorias: 600, ingredientes_principales: 'mariscos, especias', nivel_picante: 'picante', disponibilidad: 10, popularidad: 78 },
+                    { nombre: 'pescado frito', descripcion: 'pescado fresco frito, acompañado de ensalada y arroz', precio: 22000, categoria: 'platos principales', tiempo_preparacion: 30, calorias: 500, ingredientes_principales: 'pescado, ensalada, arroz', nivel_picante: 'suave', disponibilidad: 20, popularidad: 80 },
+                    { nombre: 'buñuelos', descripcion: 'bollos fritos de masa de queso, crujientes por fuera y suaves por dentro', precio: 8000, categoria: 'postres', tiempo_preparacion: 20, calorias: 300, ingredientes_principales: 'masa de queso', nivel_picante: 'suave', disponibilidad: 25, popularidad: 84 },
+                    { nombre: 'frijoles con carne', descripcion: 'frijoles cocidos lentamente con carne de cerdo y especias', precio: 16000, categoria: 'platos principales', tiempo_preparacion: 50, calorias: 550, ingredientes_principales: 'frijoles, carne de cerdo, especias', nivel_picante: 'medio', disponibilidad: 18, popularidad: 72 },
+                    { nombre: 'leche condensada con galletas', descripcion: 'postre sencillo de leche condensada con galletas, ideal para los amantes de lo dulce', precio: 6000, categoria: 'postres', tiempo_preparacion: 5, calorias: 250, ingredientes_principales: 'leche condensada, galletas', nivel_picante: 'suave', disponibilidad: 30, popularidad: 70 },
+                    { nombre: 'patacones con hogao', descripcion: 'plátanos fritos acompañados de salsa hogao, ideal para compartir', precio: 10000, categoria: 'entradas', tiempo_preparacion: 25, calorias: 400, ingredientes_principales: 'plátanos, hogao', nivel_picante: 'suave', disponibilidad: 20, popularidad: 65 },
+                    { nombre: 'ensalada de aguacate', descripcion: 'ensalada fresca con aguacate, tomate y cebolla, aderezada con limón', precio: 7000, categoria: 'entradas', tiempo_preparacion: 15, calorias: 180, ingredientes_principales: 'aguacate, tomate, cebolla', nivel_picante: 'suave', disponibilidad: 25, popularidad: 79 },
+                    { nombre: 'carne en salsa', descripcion: 'carne de res cocida en salsa de tomate con especias, servida con arroz', precio: 22000, categoria: 'platos principales', tiempo_preparacion: 45, calorias: 600, ingredientes_principales: 'carne, salsa de tomate', nivel_picante: 'medio', disponibilidad: 10, popularidad: 75 },
+                    { nombre: 'tamal tolimense', descripcion: 'masa de maiz rellena de carne de cerdo y verduras, cocida en hojas de plátano', precio: 15000, categoria: 'platos principales', tiempo_preparacion: 70, calorias: 500, ingredientes_principales: 'maiz, carne, verduras', nivel_picante: 'suave', disponibilidad: 10, popularidad: 68 },
+                    { nombre: 'arepa de choclo', descripcion: 'arepa dulce hecha con maiz tierno, servida con queso fresco', precio: 9000, categoria: 'entradas', tiempo_preparacion: 20, calorias: 250, ingredientes_principales: 'maiz, queso fresco', nivel_picante: 'suave', disponibilidad: 30, popularidad: 80 },
+                    { nombre: 'flan de coco', descripcion: 'flan cremoso de coco, servido con caramelo', precio: 8000, categoria: 'postres', tiempo_preparacion: 30, calorias: 300, ingredientes_principales: 'coco, leche, caramelo', nivel_picante: 'suave', disponibilidad: 20, popularidad: 75 },
+                    { nombre: 'sopa de pescado', descripcion: 'sopa ligera de pescado con vegetales, ideal para los días fríos', precio: 15000, categoria: 'platos principales', tiempo_preparacion: 35, calorias: 350, ingredientes_principales: 'pescado, vegetales', nivel_picante: 'medio', disponibilidad: 15, popularidad: 73 },
+                    { nombre: 'mango biche con sal', descripcion: 'mango verde servido con sal y limón, un aperitivo refrescante', precio: 5000, categoria: 'entradas', tiempo_preparacion: 5, calorias: 100, ingredientes_principales: 'mango, sal, limón', nivel_picante: 'suave', disponibilidad: 40, popularidad: 85 },
+                    { nombre: 'quesillo', descripcion: 'dulce de leche y queso, típico de la región de los Llanos', precio: 7000, categoria: 'postres', tiempo_preparacion: 15, calorias: 200, ingredientes_principales: 'leche, queso', nivel_picante: 'suave', disponibilidad: 25, popularidad: 82 },
+                    { nombre: 'pico de gallo', descripcion: 'mezcla de jitomate, cebolla, cilantro y limón, ideal para acompañar platos', precio: 4000, categoria: 'salsas', tiempo_preparacion: 10, calorias: 50, ingredientes_principales: 'jitomate, cebolla, cilantro, limón', nivel_picante: 'picante', disponibilidad: 35, popularidad: 78 },
+                    { nombre: 'pollo a la brasa', descripcion: 'pollo marinado y asado a la brasa, jugoso y delicioso', precio: 25000, categoria: 'platos principales', tiempo_preparacion: 60, calorias: 800, ingredientes_principales: 'pollo, especias', nivel_picante: 'suave', disponibilidad: 12, popularidad: 85 },
+                    { nombre: 'arroz con pollo', descripcion: 'arroz cocido con pollo y vegetales, sazonado con especias', precio: 20000, categoria: 'platos principales', tiempo_preparacion: 40, calorias: 500, ingredientes_principales: 'arroz, pollo, vegetales', nivel_picante: 'suave', disponibilidad: 15, popularidad: 80 },
+                    { nombre: 'pudín de pan', descripcion: 'postre elaborado con pan, leche y azúcar, horneado hasta dorarse', precio: 6000, categoria: 'postres', tiempo_preparacion: 25, calorias: 350, ingredientes_principales: 'pan, leche, azúcar', nivel_picante: 'suave', disponibilidad: 20, popularidad: 74 },
+                    { nombre: 'lechona', descripcion: 'cerdo asado, servido con arroz y ensalada, un festín típico', precio: 30000, categoria: 'platos principales', tiempo_preparacion: 180, calorias: 1200, ingredientes_principales: 'cerdo, arroz, ensalada', nivel_picante: 'suave', disponibilidad: 5, popularidad: 90 },
+                    { nombre: 'choclo desgranado', descripcion: 'maiz tierno desgranado, ideal como acompañamiento o aperitivo', precio: 5000, categoria: 'entradas', tiempo_preparacion: 10, calorias: 150, ingredientes_principales: 'maiz tierno', nivel_picante: 'suave', disponibilidad: 30, popularidad: 76 },
+                    { nombre: 'arepa de huevo', descripcion: 'arepa frita rellena de huevo, un clásico del caribe colombiano', precio: 9000, categoria: 'entradas', tiempo_preparacion: 20, calorias: 300, ingredientes_principales: 'arepa, huevo', nivel_picante: 'medio', disponibilidad: 25, popularidad: 78 },
+                    { nombre: 'dulce de leche', descripcion: 'postre tradicional de leche cocida y azúcar, dulce y cremoso', precio: 6000, categoria: 'postres', tiempo_preparacion: 30, calorias: 400, ingredientes_principales: 'leche, azúcar', nivel_picante: 'suave', disponibilidad: 15, popularidad: 82 },
+                    { nombre: 'coctel de mariscos', descripcion: 'mezcla de mariscos frescos con salsa de tomate y limón', precio: 28000, categoria: 'platos principales', tiempo_preparacion: 30, calorias: 450, ingredientes_principales: 'mariscos, salsa de tomate, limón', nivel_picante: 'picante', disponibilidad: 10, popularidad: 79 },
+                    { nombre: 'pasta con salsa de carne', descripcion: 'pasta servida con salsa de carne, especias y queso parmesano', precio: 18000, categoria: 'platos principales', tiempo_preparacion: 40, calorias: 650, ingredientes_principales: 'pasta, carne, queso parmesano', nivel_picante: 'suave', disponibilidad: 15, popularidad: 77 },
+                    { nombre: 'chuleta valluna', descripcion: 'chuleta de cerdo empanizada, acompañada de arroz, papa frita y ensalada fresca', precio: 23000, categoria: 'plato principal', tiempo_preparacion: 25, calorias: 950, ingredientes_principales: 'chuleta de cerdo, arroz, papa frita, ensalada', Nivel_Picante: 'suave', disponibilidad: 18, popularidad: 85 },
+                    { nombre: 'pescado frito con patacones', descripcion: 'pescado entero frito acompañado de patacones crujientes y ensalada de aguacate', precio: 27000, categoria: 'plato principal', tiempo_preparacion: 30, calorias: 800, ingredientes_principales: 'pescado, plátano, aguacate, tomate, cebolla', Nivel_Picante: 'suave', disponibilidad: 14, popularidad: 90 },
+                    { nombre: 'churrasco a la parrilla', descripcion: 'jugoso corte de carne de res a la parrilla, acompañado con papas criollas y chimichurri', precio: 32000, categoria: 'plato principal', tiempo_preparacion: 35, calorias: 1100, ingredientes_principales: 'carne de res, papas criollas, chimichurri', Nivel_Picante: 'medio', disponibilidad: 10, popularidad: 92 },
+                    { nombre: 'empanadas de carne', descripcion: 'empanadas crujientes rellenas de carne molida y papas, acompañadas de ají casero', precio: 8000, categoria: 'entrada', tiempo_preparacion: 15, calorias: 450, ingredientes_principales: 'carne molida, papa, masa de maíz, ají', Nivel_Picante: 'medio', disponibilidad: 30, popularidad: 95 },
+                    { nombre: 'cazuela de mariscos', descripcion: 'mezcla de mariscos cocidos en leche de coco, acompañada de arroz con coco', precio: 35000, categoria: 'plato principal', tiempo_preparacion: 40, calorias: 950, ingredientes_principales: 'camarones, mejillones, calamares, leche de coco, arroz con coco', Nivel_Picante: 'suave', disponibilidad: 8, popularidad: 88 }
+                  
+                  ]);
+                  </code>
+              </pre>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <div class="command-item">
+        <div class="command-content">
+            <h2 class="command-title">10 comandos</h2>
+            
+            <!-- Bloque de código desplazable con resaltado de sintaxis -->
+            <pre style="font-size: 12px; max-height: 300px; overflow-y: auto;">
+                <code class="language-json">
+                  // Muestra el plato llamado arepa con queso
+                  db.menu.find({ nombre: { $eq: 'arepa con queso' } });
+                  // Muestra platos que sean de una categoría mayor a entradas
+                  db.menu.find({ categoria: { $gt: 'entradas' } });
+                  // Muestra platos que tengan un tiempo de preparación mayor o igual a 30 minutos
+                  db.menu.find({ tiempo_preparacion: { $gte: 30 } });
+                  // Muestra platos que tengan una disponibilidad menor a 15
+                  db.menu.find({ disponibilidad: { $lt: 15 } });
+                  // Muestra platos que tengan una popularidad menor o igual a 75
+                  db.menu.find({ popularidad: { $lte: 75 } });
+                  // Muestra platos que no sean de nivel picante picante
+                  db.menu.find({ nivel_picante: { $ne: 'picante' } });
+                  // Muestra platos que tengan calorías dentro del rango de 200 a 500
+                  db.menu.find({ calorias: { $in: [200, 300, 400, 500] } });
+                  // Muestra platos que no tengan calorías dentro del rango de 300 a 600
+                  db.menu.find({ calorias: { $nin: [300, 400, 500, 600] } });
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/OPERACION 1 RESTAURANTE.png" alt="png">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 1: db.menu.find({ nombre: { $eq: 'arepa con queso' } });</h2>
+          <p class="command-description"> Muestra el plato llamado arepa con queso</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/OPERACION 2 RESTAURANTE.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 2: db.menu.find({ categoria: { $gt: 'entradas' } }); </h2>
+          <p class="command-description">Muestra platos que sean de una categoría mayor a entradas</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">  
+      <div class="command-item">
+        <div class="command-img">
+          <img src="img/OPERACION 3 RESTAURANTE.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 3: db.menu.find({ tiempo_preparacion: { $gte: 30 } });</h2>
+          <p class="command-description"> Muestra platos que tengan un tiempo de preparación mayor o igual a 30 minutos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 4 RESTAURANTE.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 4: db.menu.find({ disponibilidad: { $lt: 15 } });</h2>
+          <p class="command-description"> Muestra platos que tengan una disponibilidad menor a 15</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 5 RESTAURANTE.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 5: Muestra platos que tengan una disponibilidad menor a 15</h2>
+          <p class="command-description"> Muestra platos que tengan una popularidad menor o igual a 75</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 6 RESTAURANTE.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 6: db.menu.find({ nivel_picante: { $ne: 'picante' } });
+          </h2>
+          <p class="command-description">Muestra platos que no sean de nivel picante picante </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 7 RESTAURANTE.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 7:db.menu.find({ calorias: { $in: [200, 300, 400, 500] } });
+          </h2>
+          <p class="command-description"> Muestra platos que tengan calorías dentro del rango de 200 a 500</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 8 RESTAURANTE.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 8: db.menu.find({ calorias: { $nin: [300, 400, 500, 600] } });
+          </h2>
+          <p class="command-description">Muestra platos que no tengan calorías dentro del rango de 300 a 600</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 9 RESTAURANTE.gif" alt="gif">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 9: db.menu.find({});
+          </h2>
+          <p class="command-description">Muestra todos los platos disponibles en la colección</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="command-item">
+        <div class="command-img">
+     <img src="img/OPERACION 10 RESTAURANTE.png" alt="png">
+        </div>
+        <div class="command-content">
+          <h2 class="command-title">Comando 10:db.menu.updateOne(
+            { nombre: 'bandeja paisa' },
+            { $set: { precio: 26000 }  }); </h2>
+          <p class="command-description"> Actualiza el precio del plato llamado bandeja paisa a 26000 </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br>
+    <div class="carousel-item">
+      <div class="carousel-text">
+        <div>
+          <a href="https://www.mycompiler.io/view/LoDE0kEh9gn">Link del Codigo en mycompiler</a>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  <div class="footer">
+    <p>Copyright &copy; Taller Final Bases de Datos con Operadores Logicos en Mongo DB. Todos los derechos reservados.</p>
+    <p>Designed By Karen Perez y Esneyder Ibarra</p>
+  </div>
+</body>
+<script>
+  function buscar() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      
+      const paginas = {
+          'inicio': 'index.html',
+          'carros': 'carros.html',
+          'mercado': 'mercado.html',
+          'hoteles': 'hoteles.html',
+          'materias universidad': 'materiasUniversidad.html',
+          'restaurante': 'restaurante.html',
+          'contactos': 'contacto.html'
+      };
+      
+      if (paginas[query]) {
+          window.location.href = paginas[query];
+      } else {
+          alert('Página no encontrada');
+      }
+  }
+</script>
+</html>
